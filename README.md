@@ -23,7 +23,7 @@ Found 127 businesses (98 with a website).
 - Every email domain passed an MX check (it can actually receive mail).
 - 29 of 52 emails are on the company's own domain; the rest are flagged with `email_matches_site=False`
   (typically Gmail/Yahoo inboxes used by small businesses) so you can decide how to treat them.
-- 21 listed websites could not be crawled (11 dead domains, 7 unreachable, 1 timeout, 1 disallowed by robots.txt) —
+- 20 listed websites could not be crawled (11 dead domains, 7 unreachable, 1 timeout, 1 disallowed by robots.txt) —
   each row records why in `crawl_status`.
 
 Sample output (emails partially masked for this public repo): [`examples/florida_hvac_sample.csv`](examples/florida_hvac_sample.csv)
