@@ -1,0 +1,37 @@
+[project]
+name = "lead-finder"
+version = "0.1.0"
+description = "Build B2B lead lists from OpenStreetMap and enrich them with contact details from business websites."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "dnspython>=2.6",
+    "httpx>=0.27",
+    "openpyxl>=3.1",
+    "phonenumbers>=8.13",
+    "rich>=13.7",
+    "typer>=0.12",
+]
+
+[project.scripts]
+lead-finder = "lead_finder.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lead_finder"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
